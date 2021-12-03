@@ -1,0 +1,22 @@
+#Title {
+  text-align: center;
+}
+.top {
+  position: absolute;
+  top: 10%;
+  left: 75%;
+}
+.middle {
+  position: absolute;
+  top: 40%;
+  left: 75%;
+}
+.bottom {
+  position: absolute;
+  top: 70%;
+  left: 75%;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
