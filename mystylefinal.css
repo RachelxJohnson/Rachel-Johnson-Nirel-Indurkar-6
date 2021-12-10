@@ -61,7 +61,7 @@ html {
   display: block;
   color: #ebe7e0;
   text-align: center;
-  padding: 12px 28px;
+  padding: 12px 22px;
   text-decoration: none;
   font-size: 20px;
 }
@@ -80,7 +80,9 @@ html {
   display: none;
 }
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -88,7 +90,9 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
