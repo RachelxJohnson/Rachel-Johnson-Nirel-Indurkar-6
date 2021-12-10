@@ -1,0 +1,48 @@
+#Title {
+  text-align: center;
+}
+.top {
+  position: absolute;
+  top: 10%;
+  left: 75%;
+  box-shadow: 5px 5px 2px rgb(58, 40, 33, 0.5);
+}
+.middle {
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  box-shadow: 5px 5px 2px rgb(58, 40, 33, 0.5);
+}
+.bottom {
+  position: absolute;
+  top: 70%;
+  left: 75%;
+  box-shadow: 5px 5px 2px rgba(58, 40, 33, 0.5);
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:900");
+
+svg {
+  background: #ebe7e0;
+}
+
+text {
+  fill: #35322a;
+  filter: url("#money");
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: 80px;
+  font-weight: 900;
+}
+
+html {
+  align-items: center;
+  background: #ebe7e0;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  min-width: 600px;
+}
