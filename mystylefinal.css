@@ -52,7 +52,8 @@ html {
   overflow: hidden;
   position: fixed;
   top: 0%;
-  left: 0%;
+  left: 0.5%;
+  right: 0.5%;
 }
 
 .topnav a {
@@ -60,7 +61,7 @@ html {
   display: block;
   color: #ebe7e0;
   text-align: center;
-  padding: 12px 32.9px;
+  padding: 12px 28px;
   text-decoration: none;
   font-size: 20px;
 }
