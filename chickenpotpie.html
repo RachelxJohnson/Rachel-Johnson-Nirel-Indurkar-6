@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ChickenPotPie.css"/>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="navbar.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="Title"><svg width='600' height='200'>
+    <filter id='money'>
+      <feMorphology in='SourceGraphic' operator='dilate' radius='2' result='expand'/>
+  
+      <feOffset in='expand' dx='1' dy='1' result='shadow_1'/>
+      <feOffset in='expand' dx='2' dy='2' result='shadow_2'/>
+      <feOffset in='expand' dx='3' dy='3' result='shadow_3'/>
+      <feOffset in='expand' dx='4' dy='4' result='shadow_4'/>
+      <feOffset in='expand' dx='5' dy='5' result='shadow_5'/>
+      <feOffset in='expand' dx='6' dy='6' result='shadow_6'/>
+      <feOffset in='expand' dx='7' dy='7' result='shadow_7'/>
+  
+      <feMerge result='shadow'>
+        <feMergeNode in='expand'/>
+        <feMergeNode in='shadow_1'/>
+        <feMergeNode in='shadow_2'/>
+        <feMergeNode in='shadow_3'/>
+        <feMergeNode in='shadow_4'/>
+        <feMergeNode in='shadow_5'/>
+        <feMergeNode in='shadow_6'/>
+        <feMergeNode in='shadow_7'/>
+      </feMerge>
+  
+      <feFlood flood-color='#ebe7e0'/>
+      <feComposite in2='shadow' operator='in' result='shadow'/>
+  
+      <feMorphology in='shadow' operator='dilate' radius='1' result='border'/>
+      <feFlood flood-color='#35322a' result='border_color'/>
+      <feComposite in2='border' operator='in' result='border'/>
+  
+      <feOffset in='border' dx='1' dy='1' result='secondShadow_1'/>
+      <feOffset in='border' dx='2' dy='2' result='secondShadow_2'/>
+      <feOffset in='border' dx='3' dy='3' result='secondShadow_3'/>
+      <feOffset in='border' dx='4' dy='4' result='secondShadow_4'/>
+      <feOffset in='border' dx='5' dy='5' result='secondShadow_5'/>
+      <feOffset in='border' dx='6' dy='6' result='secondShadow_6'/>
+      <feOffset in='border' dx='7' dy='7' result='secondShadow_7'/>
+      <feOffset in='border' dx='8' dy='8' result='secondShadow_8'/>
+      <feOffset in='border' dx='9' dy='9' result='secondShadow_9'/>
+      <feOffset in='border' dx='10' dy='10' result='secondShadow_10'/>
+      <feOffset in='border' dx='11' dy='11' result='secondShadow_11'/>
+  
+      <feMerge result='secondShadow'>
+        <feMergeNode in='border'/>
+        <feMergeNode in='secondShadow_1'/>
+        <feMergeNode in='secondShadow_2'/>
+        <feMergeNode in='secondShadow_3'/>
+        <feMergeNode in='secondShadow_4'/>
+        <feMergeNode in='secondShadow_5'/>
+        <feMergeNode in='secondShadow_6'/>
+        <feMergeNode in='secondShadow_7'/>
+        <feMergeNode in='secondShadow_8'/>
+        <feMergeNode in='secondShadow_9'/>
+        <feMergeNode in='secondShadow_10'/>
+        <feMergeNode in='secondShadow_11'/>
+      </feMerge>
+  
+      <feImage x='0' y='0' width='600' height='200' xlink:href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/stripes.svg'/>
+      <feComposite in2='secondShadow' operator='in' result='secondShadow'/>
+  
+      <feMerge>
+        <feMergeNode in='secondShadow'/>
+        <feMergeNode in='border'/>
+        <feMergeNode in='shadow'/>
+        <feMergeNode in='SourceGraphic'/>
+      </feMerge>
+    </filter>
+  
+    <text dominant-baseline='middle' text-anchor='middle' x='50%' y='50%'>
+      Chicken Pot Pie
+    </text>
+  </svg></h1> 
+  <table style="margin-top: -5vh; margin-left: 75vw; position: absolute;">
+    <tr>
+      <th><img src="ChickenPot1.jpg" style="height:350px; width:300px;"></img></th>
+    </tr>
+    <tr>
+      <td><img src="ChickenPot2.jpg" style="height:350px; width:300px;"></img></td>
+    </tr>
+  </table>
+    <div style= "margin-top: -5vh; margin-left: 2vw; position: left;">
+   <h2>Ingredients</h2>
+   <ul>
+       <li>1 homemade pie crust, (2 disks)</li>
+
+        <li>4 cups cooked chicken, shredded</li>
+        
+        <li>6 Tbsp unsalted butter</li>
+        
+        <li>1 medium yellow onion, (1 cup chopped)</li>
+        
+        <li>2 medium carrots, (1 cup) thinly sliced</li>
+        
+        <li>8 oz white or brown mushrooms, (stems discarded), sliced</li>
+        
+        <li>3 garlic cloves, minced</li>
+        
+        <li>1/3 cup all-purpose flour</li>
+        
+        <li>2 cups chicken stock</li>
+        
+        <li>1/2 cup heavy cream</li>
+        
+        <li>2 tsp salt</li>
+        
+        <li>1/4 tsp black pepper</li>
+        
+        <li>1 cup frozen peas</li>
+
+        <li>1/4 cup parsley, finely chopped</li>
+
+        <li>1 egg, beaten for egg wash</li>
+   </ul>
+   <div class="text">
+        <h2>Procedure</h2>
+        <ol>
+            <li>In a dutch oven or pot, melt 6 Tbsp butter. Add diced onions and carrots and saute 8 minutes over medium<br>heat until soft.</li>
+            <li>Add sliced mushrooms and minced garlic and saute another 5 minutes until mushrooms are softened.</li>
+            <li>Add 1/3 cup flour and stir constantly for 2 minutes. Add chicken stock, and 1/2 cup heavy cream then<br> bring to a simmer and cook 1 minute or until mixture is a thick gravy consistency. Add 2 tsp salt, 1/4<br> tsp black pepper, or season to taste. It should be well-seasoned.</li>
+            <li>Add shredded cooked chicken, frozen peas, and 1/4 cup parsley. Stir to combine then remove from heat<br> and cool slightly while you roll out the crusts. Roll 1 chilled pie crust disk into a 12” diameter circle.<br>Carefully transfer it into a 9” pie dish. Spoon the pie filling over the bottom crust.</li>
+            <li>Roll the second disk of pie dough into a 10” diameter circle and place over the pie filling. Fold the<br>excess dough behind the bottom crust then crimp the pie crusts together to seal. Use a sharp paring<br>knife to cut 5 small slits in the top to allow steam to escape. Brush the top of the crust with the beaten egg<br>and sprinkle lightly with coarse salt and pepper.</li>
+            <li>Bake at 425˚F for 30-35 minutes or until top crust is golden brown. If edges are browning too fast, cover<br> with a pie shield or make a shield by cutting a 4” diameter circle from the center of a sheet of foil and<br> placing that over the pie. Once out of the oven, rest for 15 minutes to cool slightly before slicing.</li>
+        </ol>
+      </div>
+      <p style="color:#ebe7e0;">Hello, this is here just to keep the page from movig, you wont be able to see this when you are on the website, however, it stps the page from moving back and forth. This is a way to get around changing the dimensions of the text div. So this is just here, don't mind this please, no need to worry.</p>
+    <div class="topnav" id="myTopnav">
+      <a href="#home">Home</a>
+      <a href="#review">Review</a>
+      <a href="#applepie" >Apple Pie</a>
+      <a href="#pumpkinpie" >Pumpkin Pie</a>
+      <a href="#ccpie" class="active">Chicken Pot Pie</a>
+      <a href="#sugarcookies">Sugar Cookies</a>
+      <a href="#chocolatechipcookies">Chocolate Chip Cookies</a>
+      <a href="#gbcookies">Gingerbread Cookies</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      
+       
+
+      </a>
+  </div>
+
+  </div>
+</body>
+</html>
