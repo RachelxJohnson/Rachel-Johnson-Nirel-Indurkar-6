@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="sugarcookie.css"/>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="navbar.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="Title"><svg width='600' height='200'>
+    <filter id='money'>
+      <feMorphology in='SourceGraphic' operator='dilate' radius='2' result='expand'/>
+  
+      <feOffset in='expand' dx='1' dy='1' result='shadow_1'/>
+      <feOffset in='expand' dx='2' dy='2' result='shadow_2'/>
+      <feOffset in='expand' dx='3' dy='3' result='shadow_3'/>
+      <feOffset in='expand' dx='4' dy='4' result='shadow_4'/>
+      <feOffset in='expand' dx='5' dy='5' result='shadow_5'/>
+      <feOffset in='expand' dx='6' dy='6' result='shadow_6'/>
+      <feOffset in='expand' dx='7' dy='7' result='shadow_7'/>
+  
+      <feMerge result='shadow'>
+        <feMergeNode in='expand'/>
+        <feMergeNode in='shadow_1'/>
+        <feMergeNode in='shadow_2'/>
+        <feMergeNode in='shadow_3'/>
+        <feMergeNode in='shadow_4'/>
+        <feMergeNode in='shadow_5'/>
+        <feMergeNode in='shadow_6'/>
+        <feMergeNode in='shadow_7'/>
+      </feMerge>
+  
+      <feFlood flood-color='#ebe7e0'/>
+      <feComposite in2='shadow' operator='in' result='shadow'/>
+  
+      <feMorphology in='shadow' operator='dilate' radius='1' result='border'/>
+      <feFlood flood-color='#35322a' result='border_color'/>
+      <feComposite in2='border' operator='in' result='border'/>
+  
+      <feOffset in='border' dx='1' dy='1' result='secondShadow_1'/>
+      <feOffset in='border' dx='2' dy='2' result='secondShadow_2'/>
+      <feOffset in='border' dx='3' dy='3' result='secondShadow_3'/>
+      <feOffset in='border' dx='4' dy='4' result='secondShadow_4'/>
+      <feOffset in='border' dx='5' dy='5' result='secondShadow_5'/>
+      <feOffset in='border' dx='6' dy='6' result='secondShadow_6'/>
+      <feOffset in='border' dx='7' dy='7' result='secondShadow_7'/>
+      <feOffset in='border' dx='8' dy='8' result='secondShadow_8'/>
+      <feOffset in='border' dx='9' dy='9' result='secondShadow_9'/>
+      <feOffset in='border' dx='10' dy='10' result='secondShadow_10'/>
+      <feOffset in='border' dx='11' dy='11' result='secondShadow_11'/>
+  
+      <feMerge result='secondShadow'>
+        <feMergeNode in='border'/>
+        <feMergeNode in='secondShadow_1'/>
+        <feMergeNode in='secondShadow_2'/>
+        <feMergeNode in='secondShadow_3'/>
+        <feMergeNode in='secondShadow_4'/>
+        <feMergeNode in='secondShadow_5'/>
+        <feMergeNode in='secondShadow_6'/>
+        <feMergeNode in='secondShadow_7'/>
+        <feMergeNode in='secondShadow_8'/>
+        <feMergeNode in='secondShadow_9'/>
+        <feMergeNode in='secondShadow_10'/>
+        <feMergeNode in='secondShadow_11'/>
+      </feMerge>
+  
+      <feImage x='0' y='0' width='600' height='200' xlink:href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/stripes.svg'/>
+      <feComposite in2='secondShadow' operator='in' result='secondShadow'/>
+  
+      <feMerge>
+        <feMergeNode in='secondShadow'/>
+        <feMergeNode in='border'/>
+        <feMergeNode in='shadow'/>
+        <feMergeNode in='SourceGraphic'/>
+      </feMerge>
+    </filter>
+  
+    <text dominant-baseline='middle' text-anchor='middle' x='50%' y='50%'>
+      Sugar Cookies
+    </text>
+  </svg></h1> 
+  <table style="margin-top: -5vh; margin-left: 75vw; position: absolute;">
+    <tr>
+      <th><img src="Sugar1.jpg" style="height:350px; width:300px;"></img></th>
+    </tr>
+  </table>
+    <div style= "margin-top: -5vh; margin-left: 2vw; position: left;">
+   <h2>Ingredients</h2>
+   <ul>
+       <li>2 ¾ cups all-purpose flour</li>
+
+        <li>1 teaspoon baking soda</li>
+        
+        <li>1 teaspoon baking soda</li>
+        
+        <li>1 cup butter, softened</li>
+        
+        <li>1 ½ cups white sugar</li>
+        
+        <li>1 egg</li>
+        
+        <li>1 teaspoon vanilla extract</li>
+        
+   </ul>
+   <div class="text">
+        <h2>Procedure</h2>
+        <ol>
+            <li>Preheat oven to 375 degrees F (190 degrees C). In a small bowl, stir together flour, baking soda, and baking<br> powder. Set aside.</li>
+            <li>In a large bowl, cream together the butter and sugar until smooth. Beat in egg and vanilla. Gradually blend<br> in the dry ingredients. Roll rounded teaspoonfuls of dough into balls, and place onto ungreased cookie sheets.</li>
+            <li>Bake 8 to 10 minutes in the preheated oven, or until golden. Let stand on cookie sheet two minutes before<br> removing to cool on wire racks.</li>
+        </ol>
+    </div>
+    <p style="color:#ebe7e0;">Hello, this is here just to keep the page from movig, you wont be able to see this when you are on the website, however, it stps the page from moving back and forth. This is a way to get around changing the dimensions of the text div. So this is just here, don't mind this please, no need to worry.</p>
+  <div class="topnav" id="myTopnav">
+    <a href="#home">Home</a>
+    <a href="#review">Review</a>
+    <a href="#applepie" >Apple Pie</a>
+    <a href="#pumpkinpie" >Pumpkin Pie</a>
+    <a href="#ccpie">Chicken Pot Pie</a>
+    <a href="#sugarcookies"class="active">Sugar Cookies</a>
+    <a href="#chocolatechipcookies">Chocolate Chip Cookies</a>
+    <a href="#gbcookies">Gingerbread Cookies</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    
+     
+
+    </a>
+</div>
+
+</div>
+</body>
+</html>
