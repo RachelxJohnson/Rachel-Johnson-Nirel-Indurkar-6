@@ -81,45 +81,96 @@
                   Reviews!
                 </text>
               </svg></h1> <h>Write a Review!</h>
-            <div class="container">
-                <form action="action_page.php" method="get">
-              
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your name..">
-                  <br>
-                  <label for="email">Email</label>
-                  <input type="text" id="email" name="email" placeholder="Your email is..">
-                  <br>
-                  <label for="recipe">Recipe</label>
-                  <input type="text" id="recipe" name="recipe" placeholder="Your recipe is..">
-                  <br>
-                  <label for="stars">Stars</label>
-                  <select id="stars" name="stars">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                  <br>
-                  <textarea id="subject" name="subject" placeholder="Write your thoughts on the recipes.." style="height:200px"></textarea>
-              
-                  <input type="submit" value="Submit">
-                  <div>
-                    <input type="submit" name="send" class="btn-submit"
-                        value="Send" />
-    
-                    <div id="statusMessage"> 
-                            <?php
-                            if (! empty($message)) {
+              <div class="form-container">
+                <form name="frmContact" id="" frmContact"" method="post"
+                    action="" enctype="multipart/form-data"
+                    onsubmit="return validateContactForm()">
+        
+                    <div class="input-row">
+                        <label style="padding-top: 20px;">Name</label> <span
+                            id="userName-info" class="info"></span><br /> <input
+                            type="text" class="input-field" name="userName"
+                            id="userName" />
+                    </div>
+                    <div class="input-row">
+                        <label>Email</label> <span id="userEmail-info"
+                            class="info"></span><br /> <input type="text"
+                            class="input-field" name="userEmail" id="userEmail" />
+                    </div>
+                    <div class="input-row">
+                        <label>Recipe</label> <span id="subject-info"
+                            class="info"></span><br />  <textarea name="recipe"
+                            class="input-field" name="recipe" id="recipe" cols="60" rows="6"></textarea>
+                    </div>
+                    <div class="input-row">
+                        <label>Message</label> <span id="userMessage-info"
+                            class="info"></span><br />
+                        <textarea name="content" id="content"
+                            class="input-field" cols="60" rows="6"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" name="send" class="btn-submit"
+                            value="Send" />
+        
+                        <div id="statusMessage"> 
+                                <?php
+                                if (! empty($message)) {
+                                    ?>
+                                    <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                                <?php
+                                }
                                 ?>
-                                <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
-                            <?php
-                            }
-                            ?>
-                        </div>
-                  <form action="/action_page.php"></form>
-               
+                            </div>
+                    </div>
+                </form>
+                // Check if the form is submitted if ( isset( $_GET['submit'] ) ) { // retrieve the form data by using the element's name attributes value as key $firstname = $_GET['firstname']; $lastname = $_GET['lastname']; // display the results echo '<h3>Form GET Method</h3>'; echo 'Your name is ' . $lastname . ' ' . $firstname; exit;
+}
+<form action="get-method.php" method="get"> <input type="text" name="firstname" placeholder="First Name" /> <input type="text" name="lastname" placeholder="Last Name" /> <input type="submit" name="submit" /> </form> 
+            </div>
+        
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js"
+                type="text/javascript"></script>
+            <script type="text/javascript">
+                function validateContactForm() {
+                    var valid = true;
+        
+                    $(".info").html("");
+                    $(".input-field").css('border', '#e0dfdf 1px solid');
+                    var userName = $("#userName").val();
+                    var userEmail = $("#userEmail").val();
+                    var subject = $("#subject").val();
+                    var content = $("#content").val();
+                    
+                    if (userName == "") {
+                        $("#userName-info").html("Required.");
+                        $("#userName").css('border', '#e66262 1px solid');
+                        valid = false;
+                    }
+                    if (userEmail == "") {
+                        $("#userEmail-info").html("Required.");
+                        $("#userEmail").css('border', '#e66262 1px solid');
+                        valid = false;
+                    }
+                    if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/))
+                    {
+                        $("#userEmail-info").html("Invalid Email Address.");
+                        $("#userEmail").css('border', '#e66262 1px solid');
+                        valid = false;
+                    }
+        
+                    if (subject == "") {
+                        $("#subject-info").html("Required.");
+                        $("#subject").css('border', '#e66262 1px solid');
+                        valid = false;
+                    }
+                    if (content == "") {
+                        $("#userMessage-info").html("Required.");
+                        $("#content").css('border', '#e66262 1px solid');
+                        valid = false;
+                    }
+                    return valid;
+                }
+        </script>
               </div>
               <div class="topnav" id="myTopnav">
                 <a href="#home">Home</a>
@@ -136,10 +187,23 @@
                 </a>
             </div>
         </div>
-        
+        <?php
+$servername = "localhost";
+$username = "csp";
+$password = "1234";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
         <div class="column">
             <h>Your Review is below</h>
         </div>
       </div>
-</body>
+</body>0
 </html>
