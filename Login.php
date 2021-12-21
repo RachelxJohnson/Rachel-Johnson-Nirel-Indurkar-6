@@ -1,8 +1,7 @@
 <?php
-    $host = "127.0.0.1";
+    $host = "localhost";
     $user = "root";
-    $pass = "123456";
+    $pass = "1234";
     $db = "rev";
     $port = 3307;
-    
  ?>
