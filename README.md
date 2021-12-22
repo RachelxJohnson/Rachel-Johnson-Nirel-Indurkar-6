@@ -1,1 +1,2 @@
 # Rachel-Johnson-Nirel-Indurkar-6
+The review page is not updating from what we have in our XAMPP, so when we updated our XAMPP files, it would not update on GITHUB, so there are some PhP files that don't work well here, but they work during thepresentation. Additionally, some of the hrefs in the nav bars are not updating, so they are not working (they work during presentation but don't update to Github. (You asked us to write this here because we weren't sure why this was happening).
